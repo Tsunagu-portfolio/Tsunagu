@@ -6,7 +6,7 @@
 
 <div class="wrapper clearfix">
     <main class="mainTop">
-        
+        テスト
     </main>
     <div class="sideMenu">
 
