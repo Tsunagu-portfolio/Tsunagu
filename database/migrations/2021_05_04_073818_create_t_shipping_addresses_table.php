@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateShippingAddressesTable extends Migration
+class CreateTShippingAddressesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateShippingAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::create('shipping_addresses', function (Blueprint $table) {
+        Schema::create('t_shipping_addresses', function (Blueprint $table) {
             $table->increments('shipping_address_id');
             $table->string('last_name', 16);
             $table->string('first_name', 16);
-            $table->integer('zipcode');
+            $table->string('postcode', 16);
             $table->string('prefecture', 16);
             $table->string('municipality', 16);
             $table->string('address', 32);

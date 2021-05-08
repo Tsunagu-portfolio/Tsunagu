@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateShipmentStatusesTable extends Migration
+class CreateTDestinationClassificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateShipmentStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('shipment_statuses', function (Blueprint $table) {
+        Schema::create('t_destination_classifications', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('shipment_status_name', 32);
+            $table->string('destination_classification_id', 32);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateShipmentStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shipment_statuses');
+        Schema::dropIfExists('destination_classifications');
     }
 }

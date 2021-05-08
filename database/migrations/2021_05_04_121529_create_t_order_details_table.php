@@ -27,11 +27,11 @@ class CreateTOrderDetailsTable extends Migration
 
             $table->foreign('products_id')->references('id')->on('m_products');
             $table->foreign('order_id')->references('id')->on('t_orders')->onDelete('cascade');
-            $table->foreign('shipment_status_id')->references('id')->on('shipment_statuses');
-            $table->foreign('shipping_address_id')->references('shipping_address_id')->on('shipping_addresses');
-            $table->foreign('shipping_method_id')->references('shipping_method_id')->on('shipping_methods');
-            $table->foreign('payment_method_id')->references('payment_method_id')->on('payment_methods');
-            $table->foreign('billing_address_id')->references('billing_address_id')->on('billing_addresses');
+            $table->foreign('shipment_status_id')->references('shipment_status_id')->on('m_shipment_statuses');
+            $table->foreign('shipping_address_id')->references('shipping_address_id')->on('t_shipping_addresses');
+            $table->foreign('shipping_method_id')->references('shipping_method_id')->on('t_shipping_methods');
+            $table->foreign('payment_method_id')->references('payment_method_id')->on('t_payment_methods');
+            $table->foreign('billing_address_id')->references('billing_address_id')->on('t_billing_addresses');
         });
     }
 

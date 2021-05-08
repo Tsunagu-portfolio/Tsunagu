@@ -15,11 +15,8 @@ class CreateProductPromotionTagsTable extends Migration
     {
         Schema::create('product_promotion_tags', function (Blueprint $table) {
             $table->bigIncrements('promotion_tag_id');
-            $table->unsignedBigInteger('promotion_genre_id');
-            $table->string('promotion_tag_name', 8);
+            $table->string('promotion_tag_name', 8)->unique();
             $table->timestamps();
-
-            $table->foreign('promotion_genre_id')->references('promotion_genre_id')->on('promotion_tag_genres');
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDestinationClassificationsTable extends Migration
+class CreateTShippingMethodsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateDestinationClassificationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('destination_classifications', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('destination_classification_id', 32);
+        Schema::create('t_shipping_methods', function (Blueprint $table) {
+            $table->increments('shipping_method_id');
+            $table->string('shipping_method', 32);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateDestinationClassificationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('destination_classifications');
+        Schema::dropIfExists('shipping_methods');
     }
 }

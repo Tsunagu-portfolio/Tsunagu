@@ -17,17 +17,20 @@ class CreateMProductsTable extends Migration
             $table->increments('id');
             $table->string('product_name', '64');
             $table->bigInteger('category_id')->unsigned();
+            $table->string('description', '512');
+            $table->string('recommend_comment', '32');
             $table->integer('price');
-            $table->string('description', '256');
             $table->bigInteger('sale_status_id')->unsigned();
             $table->bigInteger('product_status_id')->unsigned();
             $table->timestamp('regist_date');
-            $table->integer('user_id')->unsigned();
+            $table->string('product_image_url');
+            $table->unsignedInteger('seller_id');
             $table->char('delete_flag', '1');
-            $table->foreign('category_id')->references('id')->on('m_categories')->onDelete('cascade');
-            $table->foreign('sale_status_id')->references('id')->on('m_sale_statuses')->onDelete('cascade');
-            $table->foreign('product_status_id')->references('id')->on('m_product_statuses')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('m_users')->onDelete('cascade');
+
+            $table->foreign('category_id')->references('id')->on('m_categories');
+            $table->foreign('sale_status_id')->references('id')->on('m_sale_statuses');
+            $table->foreign('product_status_id')->references('id')->on('m_product_statuses');
+            $table->foreign('seller_id')->references('seller_id')->on('m_sellers');
         });
     }
 

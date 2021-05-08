@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFavoriteProductsTable extends Migration
+class CreateProductReviewReplyFavoritesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateFavoriteProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('favorite_products', function (Blueprint $table) {
+        Schema::create('product_review_reply_favorites', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('user_id'); 
-            $table->unsignedInteger('favorite_product_id'); 
+            $table->unsignedBigInteger('product_review_reply_id');
             $table->timestamps();
 
-            $table->foreign('favorite_product_id')->references('id')->on('m_products');
+            $table->foreign('user_id')->references('id')->on('m_users');
+            $table->foreign('product_review_reply_id')->references('product_review_reply_id')->on('product_review_article_replies');
         });
     }
 
@@ -30,6 +31,6 @@ class CreateFavoriteProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favorite_products');
+        Schema::dropIfExists('product_review_reply_favorites');
     }
 }
