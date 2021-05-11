@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/detail/{id}', 'ProductController@show')->name('detail');
