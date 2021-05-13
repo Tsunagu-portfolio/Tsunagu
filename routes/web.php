@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('auth.testlogin');
 });
 
 Route::get('/detail/{id}', 'ProductController@show')->name('detail');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

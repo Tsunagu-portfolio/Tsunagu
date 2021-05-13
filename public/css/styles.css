@@ -113,3 +113,7 @@
     display: block;
     clear: both;
   }
+
+  .brand_logo {
+    margin-right: 10px;
+  }
