@@ -14,13 +14,13 @@ class m_user_classificationsTableSeeder extends Seeder
     {
         DB::table('m_user_classifications')->insert([
             [
-                'user_classification_name' => '',
+                'user_classification_name' => 'ノーマル会員',
             ],
             [
-                'user_classification_name' => 'ゴールド',
+                'user_classification_name' => 'ゴールド会員',
             ],
             [
-                'user_classification_name' => 'プラチナ',
+                'user_classification_name' => 'プラチナ会員',
             ],
         ]);
     }
