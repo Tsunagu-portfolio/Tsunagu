@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/detail/{id}', 'ProductController@show')->name('detail');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
