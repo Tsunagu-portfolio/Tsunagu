@@ -27,7 +27,8 @@ class CreateMSellersTable extends Migration
             $table->string('seller_message', 256);
             $table->unsignedInteger('user_id');
             $table->timestamps();
-
+            $table->char('delete_flag', '1');
+            
             $table->foreign('user_id')->references('id')->on('m_users');
         });
     }
