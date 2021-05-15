@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Product;
 use App\Category;
+use App\Seller;
 
 class ProductController extends Controller
 {
@@ -59,6 +60,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
+        // $seller =  Seller::find($product);
         if (!$product) {
             // 商品IDがない時
             return view('product.not_found');

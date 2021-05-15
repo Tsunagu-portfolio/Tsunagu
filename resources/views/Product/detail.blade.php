@@ -7,7 +7,8 @@
         <div class="row">
           <div class="leftside col-4">            
             <div class="likePosition">
-              <img src="images/{{ $product->product_image_url }}" class="img-thumbnail" alt="...">
+              {{-- <img src="images/{{ $product->product_image_url }}" class="img-thumbnail" alt="商品画像"> --}}
+              <img src="{{ asset('images/no_image.jpg') }}" class="img-thumbnail" alt="商品画像">
               <div class="likeIcon">
                 <i class="fa fa-heart"></i>
               </div>
@@ -16,7 +17,7 @@
           <div class="rightside col-sm">            
             <h3 class="my-5 ml-5">{{ $product->product_name }}</h3>
             <h4 class="mb-3 ml-5">価格 : {{ $product->price }} 円</h4>
-            <h4 class="mb-5 ml-5"> 出品者名: {{ $product->seller_id->seller_name }}</h4>
+            {{-- <h4 class="mb-5 ml-5"> 出品者名: {{ $product->seller_id->seller_name }}</h4> --}}
             <div class="rightside col-sm" style="text-align:end; ">
               <div class="field mt-5">
                 注文個数
@@ -44,14 +45,17 @@
           <h5 class="ml-5 mb-1">発送:</h5>
         </div>
         <div class="rightside">
-          <h5 class="ml-5 mb-1">13時まで注文で当日発送</h5>
-          <h5 class="mb-2">時間指定承ります</h5>
+          
+          <h5 class="ml-5 mb-1" style="text-align: left; line-height:30px;">{!! nl2br(e($product->shipping_information)) !!}</h5>
+          <h5 class="mb-2"></h5>
         </div>        
       </div>
+      <hr class="ml-5">
       <div class="row">       
-        <hr class="ml-5">
         <div class="row">
           <div class="leftside">
+            
+            
             <h5 class="ml-5 mb-1">商品説明:{{ $product->description }}</h5>
           </div>
           <div class="rightside">
@@ -63,7 +67,7 @@
         <div class="row justify-content-center">
           <div class="card mb-4" style="width: 85%; ">
             <div class="card-body">
-              {{-- {{ $m_sellers->seller_message }} --}}
+              {{-- {{ $product->$seller->seller_message }} --}}
             </div>
           </div>
         </div>
