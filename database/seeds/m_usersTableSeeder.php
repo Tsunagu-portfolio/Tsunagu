@@ -14,6 +14,7 @@ class m_usersTableSeeder extends Seeder
         DB::table('m_users')->insert([
             [
                 'password' => bcrypt('sample1'),
+                'name' => 'sample1',
                 'last_name' => '田中',
                 'first_name' => '太郎',
                 'postcode' => '1111111',
@@ -28,6 +29,7 @@ class m_usersTableSeeder extends Seeder
             ],
             [
                 'password' => bcrypt('sample2'),
+                'name' => 'sample2',
                 'last_name' => '斎藤',
                 'first_name' => '優',
                 'postcode' => '2222222',
@@ -42,6 +44,7 @@ class m_usersTableSeeder extends Seeder
             ],
             [
                 'password' => bcrypt('sample3'),
+                'name' => 'sample3',
                 'last_name' => '西野',
                 'first_name' => '紘',
                 'postcode' => '3333333',
@@ -56,6 +59,7 @@ class m_usersTableSeeder extends Seeder
             ],
             [
                 'password' => bcrypt('sample3'),
+                'name' => 'sample4',
                 'last_name' => '松井',
                 'first_name' => '秀樹',
                 'postcode' => '3333343',
@@ -70,6 +74,7 @@ class m_usersTableSeeder extends Seeder
             ],
             [
                 'password' => bcrypt('sample3'),
+                'name' => 'sample5',
                 'last_name' => '原',
                 'first_name' => '辰矢',
                 'postcode' => '3333353',
@@ -84,6 +89,7 @@ class m_usersTableSeeder extends Seeder
             ],
             [
                 'password' => bcrypt('sample3'),
+                'name' => 'sample6',
                 'last_name' => '大田',
                 'first_name' => '信長',
                 'postcode' => '3333633',
