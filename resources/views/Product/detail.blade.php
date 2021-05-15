@@ -16,7 +16,7 @@
           <div class="rightside col-sm">            
             <h3 class="my-5 ml-5">{{ $product->product_name }}</h3>
             <h4 class="mb-3 ml-5">価格 : {{ $product->price }} 円</h4>
-            <h4 class="mb-5 ml-5"> 出品者名</h4>
+            <h4 class="mb-5 ml-5"> 出品者名: {{ $product->seller_id->seller_name }}</h4>
             <div class="rightside col-sm" style="text-align:end; ">
               <div class="field mt-5">
                 注文個数

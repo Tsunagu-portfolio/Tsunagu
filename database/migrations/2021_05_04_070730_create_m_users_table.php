@@ -23,10 +23,10 @@ class CreateMUsersTable extends Migration
             $table->string('municipality', 16);
             $table->string('address', 32);
             $table->string('apartments', 32);
-            $table->string('email', 128);
+            $table->string('email', 128)->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('phone_number', 16);
             $table->unsignedInteger('user_classification_id')->default(2);
-            $table->unsignedBigInteger('session_id')->nullable();
             $table->char('delete_flag', 1)->default(0);
             $table->rememberToken();
             $table->timestamps();
