@@ -7,7 +7,7 @@
         <div class="row">
           <div class="leftside col-4">            
             <div class="likePosition">
-              <img src="images/no_image.jpg" class="img-thumbnail" alt="...">
+              <img src="images/{{ $product->product_image_url }}" class="img-thumbnail" alt="...">
               <div class="likeIcon">
                 <i class="fa fa-heart"></i>
               </div>
@@ -35,7 +35,7 @@
           <h5 class="ml-5 mb-3">内容</h5>
         </div>
         <div class="rightside">
-          <h5 class="ml-5">1kg / 1pc</h5>
+          <h5 class="ml-5">{{ $product->sales_unit }}</h5>
         </div>
       </div>
       <hr class="ml-5">
@@ -63,7 +63,7 @@
         <div class="row justify-content-center">
           <div class="card mb-4" style="width: 85%; ">
             <div class="card-body">
-              {{ $m_sellers->seller_message }}
+              {{-- {{ $m_sellers->seller_message }} --}}
             </div>
           </div>
         </div>
