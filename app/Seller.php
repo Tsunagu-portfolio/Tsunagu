@@ -17,4 +17,9 @@ class Seller extends Model
   {
     return $this->hasMany('App\Product');
   }
+
+  public function seller_favorite()
+  {
+    return $this->hasMany('App\SellerFavorite');
+  }
 }

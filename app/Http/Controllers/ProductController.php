@@ -59,8 +59,21 @@ class ProductController extends Controller
 
     public function show($id)
     {
-        $product = Product::find($id);
-        // $seller =  Seller::find($product);
+        // $product = Product::find($id);
+        // $product = Product::with($id)->find('Seller');
+        // $product = Product::with('Seller')->get($id);
+        // $product = Product::with('Seller')->find($id);
+        // $product = Product::find($id)->with(['Product','seller']);
+        // $product = Product::find($id)->with(['Seller','prooduct']);
+        // $product = Product::where($id)->with(['Seller','prooduct']);
+        // $product = Product::where($id)->with(['Product','seller']);
+        // $product = Product::with($id)->find(['Product','seller']);
+        // $product = Product::find($id)->with(['Product','seller']);
+        $product = Product::where('product_id', $id)
+            ->with(['category', 'seller.seller_favorite.m_user'])
+            ->get();
+        ddd($product);
+        
         if (!$product) {
             // 商品IDがない時
             return view('product.not_found');

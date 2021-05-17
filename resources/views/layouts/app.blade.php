@@ -30,6 +30,6 @@
     <script src="{{ asset('/js/jquery.js') }}"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-
+    
 </body>
 </html>
