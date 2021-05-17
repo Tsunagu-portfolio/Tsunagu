@@ -20,7 +20,7 @@ class CreateSellerFavoritesTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('m_users');
-            $table->foreign('seller_id')->references('seller_id')->on('m_sellers');
+            $table->foreign('seller_id')->references('id')->on('m_sellers');
         });
     }
 

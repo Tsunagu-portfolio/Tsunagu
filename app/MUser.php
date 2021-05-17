@@ -46,4 +46,9 @@ class MUser extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function seller_favorite()
+    {
+        return $this->hasMany('App\SellerFavorite', 'user_id');
+    }
 }

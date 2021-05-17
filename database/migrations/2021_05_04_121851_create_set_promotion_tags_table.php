@@ -19,7 +19,7 @@ class CreateSetPromotionTagsTable extends Migration
             $table->unsignedBigInteger('promotion_tag_id'); 
             $table->timestamps();
 
-            $table->foreign('product_id')->references('id')->on('m_products');
+            $table->foreign('product_id')->references('product_id')->on('m_products');
             $table->foreign('promotion_tag_id')->references('promotion_tag_id')->on('product_promotion_tags');
         });
     }

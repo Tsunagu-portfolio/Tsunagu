@@ -14,7 +14,7 @@ class CreateMSellersTable extends Migration
     public function up()
     {
         Schema::create('m_sellers', function (Blueprint $table) {
-            $table->increments('seller_id');
+            $table->increments('id');
             $table->string('seller_name', 32);
             $table->string('seller_category', 16);
             $table->string('postcode', 16);

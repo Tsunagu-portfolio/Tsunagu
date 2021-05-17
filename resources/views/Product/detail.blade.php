@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+@foreach($product as $value1)
+  @foreach($value1->seller->seller_favorite as $value2)
+  @endforeach
+@endforeach
+
   <main>
     <div class="card">
       <div class="container">
@@ -14,9 +20,9 @@
             </div>
           </div>
           <div class="rightside col-sm">            
-            <h3 class="my-5 ml-5">商品タイトル</h3>
+            <h3 class="my-5 ml-5"> {{ $value1->product_name }} <br>商品カテゴリー:{{ $value1->category->category_name }}</h3>
             <h4 class="mb-3 ml-5">価格</h4>
-            <h4 class="mb-5 ml-5"> 出品者名</h4>
+            <h4 class="mb-5 ml-5">生産者名: 【{{ $value1->seller->seller_name }}】  <br><br>この生産者に【いいね】をつけているユーザーの名前は <br> {{ $value2->m_user->last_name }} The {{ $value2->m_user->first_name }}</h4>
             <div class="rightside col-sm" style="text-align:end; ">
               <div class="field mt-5">
                 注文個数

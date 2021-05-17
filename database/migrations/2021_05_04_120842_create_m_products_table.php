@@ -14,7 +14,7 @@ class CreateMProductsTable extends Migration
     public function up()
     {
         Schema::create('m_products', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('product_id');
             $table->string('product_name', '64');
             $table->bigInteger('category_id')->unsigned();
             $table->string('description', '512');
@@ -30,7 +30,7 @@ class CreateMProductsTable extends Migration
             $table->foreign('category_id')->references('id')->on('m_categories');
             $table->foreign('sale_status_id')->references('id')->on('m_sale_statuses');
             $table->foreign('product_status_id')->references('id')->on('m_product_statuses');
-            $table->foreign('seller_id')->references('seller_id')->on('m_sellers');
+            $table->foreign('seller_id')->references('id')->on('m_sellers');
         });
     }
 
