@@ -159,13 +159,7 @@
                             <label for="apartments" class="col-md-4 col-form-label text-md-right">{{ __('apartments') }}</label>
 
                             <div class="col-md-6">
-                                <input id="apartments" type="text" class="form-control @error('apartments') is-invalid @enderror" name="apartments" value="{{ old('apartments') }}" required autocomplete="apartments" autofocus>
-
-                                @error('apartments')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input id="apartments" type="text" name="apartments" value="{{ old('apartments') }}" autocomplete="apartments" autofocus>
                             </div>
                         </div>
 
