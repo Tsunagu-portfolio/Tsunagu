@@ -47,6 +47,6 @@ class Product extends Model
 
     public function seller()
     {
-        return $this->belongsTo('App\Seller','seller_id');
+        return $this->belongsTo('App\Seller', 'seller_id');
     }
 }

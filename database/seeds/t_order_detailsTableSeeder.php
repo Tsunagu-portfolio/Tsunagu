@@ -13,7 +13,7 @@ class t_order_detailsTableSeeder extends Seeder
     {
         $dt = new DateTime();
         DB::table('t_order_details')->insert([
-            'products_id' => 1,
+            'product_id' => 1,
             'order_id' => 1,
             'shipment_status_id' => 1,
             'order_quantity' => 2,

@@ -15,7 +15,7 @@ class Category extends Model
 
     public function product()
     {
-        return $this->hasMany('App\Products','product_id');
+        return $this->hasMany('App\Products', 'product_id');
     }
 
     // m_categoriesテーブルから::pluckでcategory_nameとidを抽出

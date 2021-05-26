@@ -51,5 +51,4 @@ class MUser extends Authenticatable
     {
         return $this->hasMany('App\SellerFavorite', 'user_id');
     }
-    
 }
