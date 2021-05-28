@@ -24,6 +24,12 @@
         .brand_logo {
             margin-right: 10px;
         }
+
+        .order_product_image {
+            margin: 0 20px 20px 0;
+            padding: 10px;
+            border: solid 1px;
+        }
     </style>
 </head>
 <body>

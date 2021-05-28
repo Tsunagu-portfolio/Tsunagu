@@ -117,3 +117,8 @@
   .brand_logo {
     margin-right: 10px;
   }
+
+  .order_product_image {
+    margin: 10px;
+    padding: 10px;
+  }

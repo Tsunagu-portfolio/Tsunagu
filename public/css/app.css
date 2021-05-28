@@ -10945,5 +10945,10 @@ a.text-dark:focus {
     margin-top: 1100px;
     position: relative;
   }
+
+  .order_product_image {
+    margin: 10px;
+    padding: 10px;
+  }
 }
 
