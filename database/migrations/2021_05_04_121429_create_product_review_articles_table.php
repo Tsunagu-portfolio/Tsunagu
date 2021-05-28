@@ -22,7 +22,7 @@ class CreateProductReviewArticlesTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('m_users');
-            $table->foreign('product_id')->references('product_id')->on('m_products');
+            $table->foreign('product_id')->references('id')->on('m_products');
         });
     }
 

@@ -16,7 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/detail/{id}', 'ProductController@show')->name('detail');
+Route::post('/addCart', 'CartController@addCart')->name('addCart');
+Route::get('/cart/index', 'CartController@index')->name('cart.index');
+Route::post('/cart/list_delete', 'CartController@delete')->name('cartItemDelete');
+Route::post('/CartFinalized', 'CartController@store')->name('cartFinalized');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/top', 'ProductController@index')->name('top');

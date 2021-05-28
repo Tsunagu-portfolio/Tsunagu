@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Product;
 use App\Category;
+use App\Seller;
 
 class ProductController extends Controller
 {
@@ -64,11 +65,18 @@ class ProductController extends Controller
         //     return view('product.not_found');
         // }
 
-        $product = Product::where('product_id', $id)
+        $product = Product::where('id', $id)
             ->with(['category', 'seller.seller_favorite.m_user'])
             ->get();
 
-            //ddd($product);
+            // ddd($product);
         return view('product.detail', compact('product'));
     }
+
+    public function index()
+    {
+        $products = Product::Paginate(6);
+        return view('top', compact('products'));
+    }
+
 }

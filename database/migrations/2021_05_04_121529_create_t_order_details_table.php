@@ -25,7 +25,7 @@ class CreateTOrderDetailsTable extends Migration
             $table->unsignedBigInteger('billing_address_id');
             $table->timestamp('shipment_date');
 
-            $table->foreign('product_id')->references('product_id')->on('m_products');
+            $table->foreign('product_id')->references('id')->on('m_products');
             $table->foreign('order_id')->references('id')->on('t_orders')->onDelete('cascade');
             $table->foreign('shipment_status_id')->references('shipment_status_id')->on('m_shipment_statuses');
             $table->foreign('shipping_address_id')->references('shipping_address_id')->on('t_shipping_addresses');
