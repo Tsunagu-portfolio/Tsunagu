@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('auth.testlogin');
+    return view('order.order_history');
 });
 
 Route::get('/detail/{id}', 'ProductController@show')->name('detail');
