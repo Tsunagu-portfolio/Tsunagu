@@ -24,10 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-        $products = Product::Paginate(6);
-        return view('welcome', compact('products'));
+        return view('testlogin');
     }
 
-    
 }

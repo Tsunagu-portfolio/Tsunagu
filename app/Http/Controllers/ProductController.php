@@ -73,6 +73,10 @@ class ProductController extends Controller
         return view('product.detail', compact('product'));
     }
 
-    
+    public function index()
+    {
+        $products = Product::Paginate(6);
+        return view('top', compact('products'));
+    }
 
 }

@@ -23,4 +23,4 @@ Route::post('/CartFinalized', 'CartController@store')->name('cartFinalized');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/top', 'ProductController@index')->name('top');
